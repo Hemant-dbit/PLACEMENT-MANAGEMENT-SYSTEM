@@ -48,6 +48,7 @@ public class DatabaseDriver {
 
     // Method to get admin data by username
 
+    @SuppressWarnings("exports")
     public ResultSet getAdminData(String username) {
         ResultSet resultSet = null;
         try {

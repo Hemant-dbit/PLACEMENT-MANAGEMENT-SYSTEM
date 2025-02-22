@@ -1,26 +1,33 @@
 module com.example.pms {
+    // JavaFX modules
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
     requires javafx.base;
-    requires de.jensd.fx.glyphs.fontawesome;
-    requires java.sql;
-    requires org.xerial.sqlitejdbc;
+    requires javafx.graphics;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
-    requires java.desktop;
-    requires java.mail;
+    // Third-party libraries
+    requires de.jensd.fx.glyphs.fontawesome; // FontAwesomeFX
+    requires org.controlsfx.controls;      // ControlsFX
+    requires com.dlsc.formsfx;             // FormsFX
+    requires net.synedra.validatorfx;      // ValidatorFX
+    requires org.kordamp.ikonli.javafx;    // Ikonli JavaFX
+    requires org.kordamp.bootstrapfx.core; // BootstrapFX
+    requires eu.hansolo.tilesfx;           // TilesFX
+    requires com.almasb.fxgl.all;          // FXGL (Game Engine)
 
-    // Open specific packages to JavaFX for reflection
-    opens com.example.pms to javafx.fxml;
-    opens com.example.pms.Controllers to javafx.fxml;
-    opens com.example.pms.Controllers.Admin to javafx.fxml;
+    // Other dependencies
+    requires java.sql;                     // SQL support
+    requires org.xerial.sqlitejdbc;        // SQLite JDBC driver
+    requires java.desktop;                 // Desktop integration
+    requires java.mail;                    // JavaMail API
+
+    // Open packages for JavaFX reflection
+    opens com.example.pms.Models to javafx.base, javafx.fxml;
+    opens com.example.pms to javafx.fxml, javafx.base;
+    opens com.example.pms.Controllers to javafx.fxml, javafx.base;
+    opens com.example.pms.Controllers.Admin to javafx.fxml, javafx.base;
+    opens com.example.pms.Views to javafx.fxml, javafx.base;  // Add this if Views uses FXML or reflection
 
     // Export packages to make them available to other modules
     exports com.example.pms;
@@ -28,6 +35,4 @@ module com.example.pms {
     exports com.example.pms.Controllers.Admin;
     exports com.example.pms.Models;
     exports com.example.pms.Views;
-
-    
 }

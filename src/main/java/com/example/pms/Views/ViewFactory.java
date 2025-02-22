@@ -8,9 +8,7 @@ import com.example.pms.Models.Students;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -61,6 +59,7 @@ public class ViewFactory {
     * Menu Options
     * */
 
+    @SuppressWarnings("exports")
     public AnchorPane getDashboardView() {
         if (dashboardView == null) {
             try {

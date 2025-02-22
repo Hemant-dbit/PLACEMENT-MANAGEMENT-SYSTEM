@@ -34,30 +34,37 @@ public class PlacedStudents {
     }
 
     // Getters for property binding
+    @SuppressWarnings("exports")
     public StringProperty placedStudentNameProperty() {
         return placedStudentName;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentDeptProperty() {
         return placedStudentDept;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentPhoneProperty() {
         return placedStudentPhone;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentRollProperty() {
         return placedStudentRole;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentPackageProperty() {
         return placedStudentPackage;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentCompanyProperty() {
         return placedStudentCompany;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentEmailProperty() {
         return placedStudentEmail;
     }
@@ -66,10 +73,12 @@ public class PlacedStudents {
         return placedStudentDate;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentAddressProperty() {
         return placedStudentAddress;
     }
 
+    @SuppressWarnings("exports")
     public StringProperty placedStudentIdProperty() {
         return placedStudentId;
     }
